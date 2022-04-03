@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reconsider-machine-learning" class="md-skip">
+        <a href="#data-engieer-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -240,6 +240,22 @@
     <li class="md-tabs__item">
       <a href="../babushka/" class="md-tabs__link md-tabs__link--active">
         Blog
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../breakroom/break/" class="md-tabs__link">
+        Break Room
       </a>
     </li>
   
@@ -415,6 +431,110 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tft_beam/" class="md-nav__link">
+        Using Tensorflow Transform in Apache Beam
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Break Room
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Break Room" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Break Room
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../breakroom/break/" class="md-nav__link">
+        Find your ideal place
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../breakroom/japan/" class="md-nav__link">
+        Living in Japan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../breakroom/turkey/" class="md-nav__link">
+        Living in Turkey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../breakroom/france/" class="md-nav__link">
+        Living in France
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -450,9 +570,40 @@
                 
 
 
-<h1 id="reconsider-machine-learning">Reconsider Machine Learning</h1>
-<p>Being Machine Learning Engineer requires the significant efforts and expertises on skills. </p>
-<p>Are you ready to start your journey...?</p>
+<h1 id="data-engieer-architecture">Data Engieer Architecture</h1>
+<p>Reading time: 5 minutes</p>
+<figure>
+<p><img alt="Image title" src="https://future.a16z.com/wp-content/uploads/2020/10/Blueprint-1_-Modern-Business-Intelligence-1.png" /></p>
+</figure>
+<ul>
+<li>There has been a surge of interest in the metrics layer, a system providing a standard set of definitions on top of the data warehouse. This has been hotly debated, including what capabilities it should have, which vendor(s) should own it, and what spec it should follow. So far, we’ve seen several credible pure-play products (like Transform and Supergrain), plus expansion into this category by dbt.</li>
+<li><strong>Reverse ETL</strong> vendors have grown meaningfully, particularly Hightouch and Census. The purpose of these products is to update operational systems, like CRM or ERP, with outputs and insights derived from the data warehouse.</li>
+<li>Data teams are showing stronger interest in new applications to augment their standard dashboards, especially data workspaces (like Hex). Broadly speaking, new apps are likely the result of increasing standardization in cloud data warehouses — once data is cleanly structured and easy to access, data teams naturally want to do more with it.</li>
+<li>Data discovery and observability companies have proliferated and raised substantial amounts of capital (especially Monte Carlo and Bigeye). While the benefits of these products are clear — i.e. more reliable data pipelines and better collaboration — adoption is still relatively early, as customers discover relevant use cases and budgets. (Technical note: although there are several credible new vendors in data discovery — e.g. Select Star, Metaphor, Stemma, Secoda, Castor — we have excluded seed-stage companies from the diagram in general.)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://future.a16z.com/wp-content/uploads/2020/10/Blueprint-2_-Multimodal-Data-Processing-1.png" /></p>
+</figure>
+<ul>
+<li>There is growing recognition and clarity for the lakehouse architecture. We’ve seen this approach supported by a wide range of vendors (including AWS, Databricks, Google Cloud, Starburst, and Dremio) and data warehouse pioneers. The fundamental value of the lakehouse is to pair a robust storage layer with an array of powerful data processing engines like Spark, Presto, Druid/Clickhouse, Python libraries, etc.</li>
+<li>The <strong>storage layer</strong> itself is getting an upgrade. While technologies like Delta, Iceberg, and Hudi are not new, they are seeing accelerated adoption and are being built into commercial products. Some of these technologies (particularly Iceberg) also interoperate with cloud data warehouses like Snowflake. If heterogeneity is here to stay, this is likely to become a key part of the multimodal data stack.</li>
+<li>There may be an uptick in adoption taking place for stream processing (i.e., real-time analytical data processing). While first-generation technologies like Flink still haven’t gone mainstream, new entrants with simpler programming models (like Materialize and Upsolver) are gaining early adoption, and, anecdotally, usage of stream processing products from incumbents Databricks and Confluent has also started to accelerate.</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://future.a16z.com/wp-content/uploads/2022/03/Blueprint-3_-Artificial-Intelligence-and-Machine-Learning.png" /></p>
+</figure>
+<ul>
+<li>The ML industry is consolidating around a data-centric approach, emphasizing sophisticated data management over incremental modeling improvements. This has several implications:<ul>
+<li>Rapid growth for data labeling (e.g. Scale and Labelbox) and growing interest in closed-loop data engines, largely modeled on Tesla’s Autopilot data pipelines.</li>
+<li>Increased adoption for feature stores (e.g. Tecton), for both batch and real-time use cases, as a means to develop production-grade ML data in a collaborative way.</li>
+<li>Revived interest in low-code ML solutions (like Continual and MindsDB) that at least partially automate the ML modeling process. These newer solutions focus on bringing new users (i.e. analysts and software developers) into the ML market.</li>
+</ul>
+</li>
+<li>Use of <strong>pre-trained models</strong> is becoming the default, especially in NLP, and providing tailwinds to companies like OpenAI and Hugging Face. There are still meaningful problems to solve here around fine-tuning, cost, and scaling.</li>
+<li>Operations tools for ML (sometimes called MLops) are becoming more mature, built around <strong>ML monitoring</strong> as the most in-demand use case and immediate budget. Meanwhile, a raft of new operational tools — including, notably, <strong>validation</strong> and <strong>auditing</strong> — are appearing, with the ultimate market still to be determined.</li>
+<li>There is increased focus on how developers can seamlessly integrate ML models into applications, including through <strong>pre-built APIs</strong> (e.g. OpenAI), <strong>vector databases</strong> (e.g. Pinecone), and more opinionated frameworks.</li>
+</ul>
+<p>Source: https://future.a16z.com/emerging-architectures-modern-data-infrastructure/</p>
 
               
             </article>
@@ -548,7 +699,7 @@
       
       
     
-    <a href="https://twitter.com/babushka_tech" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+    <a href="https://twitter.com/babushka_ml" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
